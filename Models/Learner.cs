@@ -5,6 +5,7 @@ namespace MyWebApp.Models
 {
     public class Learner
     {
+
         public int LearnerID { get; set; }
         public string LastName { get; set; }
 		public string FirstMidName { get; set; }
@@ -13,10 +14,9 @@ namespace MyWebApp.Models
        
 		public int MajorID { get; set; }
 
-        [ValidateNever]
-        public Major Major { get; set; }
+        public virtual Major? Major { get; set; }
 
         [ValidateNever]
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
     }
 }

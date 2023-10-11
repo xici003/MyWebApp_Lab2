@@ -11,7 +11,7 @@ namespace MyWebApp.Data
             .GetRequiredService<DbContextOptions<SchoolContext>>()))
             {
                 context.Database.EnsureCreated();
-                if (context.Learners.Any())
+                if (context.Learners.Any()) // Trả về true/ false
                 {
                     return;
                 }
